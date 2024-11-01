@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1, #fbc2eb, #fcd3e1);
+    background-size: 400% 400%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientBackground 10s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 500px;
+    color: #333;
+    backdrop-filter: blur(15px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.username {
+    font-size: 2em;
+    color: #ffffff;
+    margin-top: 1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    font-size: 1em;
+    margin-top: 0.5em;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1em;
+}
+
+.icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.icon.facebook {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3);
+}
+
+.icon.github {
+    background: linear-gradient(135deg, #333, #4d4d4d);
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);
+}
+
+.hobbies {
+    margin-top: 1.5em;
+    text-align: center;
+    color: #fff;
+}
+
+.hobbies h2 {
+    font-size: 1.4em;
+    color: #ffebc7;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hobbies p {
+    color: #f8f8f8;
+    font-size: 1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+    margin-top: 1.5em;
+    font-style: italic;
+    color: #ffebc7;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.quote:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
